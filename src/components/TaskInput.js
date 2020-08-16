@@ -14,22 +14,17 @@ const Container = styled.div`
 `
 
 const TaskInput = ({ onSubmit }) => {
-    const [text, setText] = useState('')
+    const inputRef = useRef()
     const theme = useTheme()
 
-    const handleTextChange = (e) => {
-        const { value } = e.target
-        setText(value)
-    }
-
     const handleSubmit=  () => {
-        setText('')
-        onSubmit(text)
+        onSubmit(inputRef.current.value)
+        inputRef.current.value = ''
     }
 
     return (
         <Container>
-            <Input value={text} onChange={handleTextChange} placeholder="Enter task here" />
+            <Input ref={inputRef} placeholder="Enter task here" />
             <ClearButton onClick={handleSubmit}><PlusCircle color={theme.buttonColor.main} size={30} /></ClearButton>
         </Container>
     )
