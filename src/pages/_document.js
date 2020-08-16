@@ -34,15 +34,15 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charset="utf-8" />
-          <link rel="icon" href="16x16.png" />
+          <link rel="icon" href="/16x16.png" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#eeeeee" />
           <meta
             name="description"
             content="A Next-PWA that lists todo."
           />
-          <link rel="apple-touch-icon" href="128x128.png" />
-          <link rel="manifest" href="manifest.json" />
+          <link rel="apple-touch-icon" href="/128x128.png" />
+          <link rel="manifest" href="/manifest.json" />
           <title>FSAYCON.DEV - Todo List</title>
         </Head>
         <body>
